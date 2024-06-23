@@ -323,26 +323,27 @@ function Editor() {
                   className={`mt-1 w-full px-3 py-2 text-2xl bg-white border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 ${styles.mlChkWid}`}
                 />
               </div>
-              <div className={styles.row}>
-                <label className="flex items-center space-x-2 mt-4">
-                  <input
-                    type="checkbox"
-                    name="showRole"
-                    checked={activeJob.showRole}
-                    onChange={handleCheckboxChange}
-                    className="mr-2"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Your job role will include..."
-                    name="role"
-                    value={activeJob.role}
-                    onChange={handleInputChange}
-                    className="mt-1 w-full px-3 py-2 text-2xl bg-white border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-                  />
-                </label>
+              <div className={styles.rowWithLabel}>
+                <input
+                  type="checkbox"
+                  name="showRole"
+                  checked={activeJob.showRole}
+                  onChange={handleCheckboxChange}
+                />
+                <label>Roles & Responsibilities</label>
+
+                <br />
+                <input
+                  type="text"
+                  placeholder="your job roll will include..."
+                  name="role"
+                  value={activeJob.role}
+                  onChange={handleInputChange}
+                
+                  className={`mt-1 w-full px-3 py-2 text-2xl bg-white border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 ${styles.mlChkWid}`}
+                />
               </div>
-              <div className="flex items-center space-x-4 mt-4">
+              <div >
                 <label className="text-sm font-medium">
                   Experience Range(yrs):
                 </label>
