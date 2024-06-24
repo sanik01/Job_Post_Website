@@ -84,7 +84,44 @@
     margin-left: 2.3rem;
   }
 }
-
+.rowwithLabelStyle{
+  height: 2rem;
+  width: 17rem;
+  
+}
+.StyleBox{
+  height: 3rem;
+  width: 17rem;
+  
+}
+.rowStyleBox{
+  
+  width: 17rem;
+  
+}
+.InputBox{
+  width: 17rem;
+}
+.messageBox{
+  height: 5rem;
+  width: 17rem;
+}
+.rowWithLabelExp{
+  display: flex;
+  input[type="checkbox"] {
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+  }
+  .mlChkWid {
+    margin-left: 2.3rem;
+  }
+}
+.minInput{
+  margin-right: 0.5rem;
+}
+.maxInput{
+  margin-left: 0.5rem;
+}
 .detail .column {
   display: flex;
   flex-direction: column;

@@ -314,13 +314,14 @@ function Editor() {
 
                 <br />
                 <input
+                className={styles.rowWithLabel}
                   type="text"
                   placeholder="The Ideal candidate is someone ..."
                   name="introduction"
                   value={activeJob.introduction}
                   onChange={handleInputChange}
                 
-                  className={`mt-1 w-full px-3 py-2 text-2xl bg-white border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 ${styles.mlChkWid}`}
+                  className={`mt-1 w-full px-3 py-2 text-2xl bg-white border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 ${styles.mlChkWid} ${styles.rowwithLabelStyle} `}
                 />
               </div>
               <div className={styles.rowWithLabel}>
@@ -340,31 +341,39 @@ function Editor() {
                   value={activeJob.role}
                   onChange={handleInputChange}
                 
-                  className={`mt-1 w-full px-3 py-2 text-2xl bg-white border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 ${styles.mlChkWid}`}
+                  className={`mt-1 w-full px-3 py-2 text-2xl bg-white border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 ${styles.mlChkWid} ${styles.StyleBox}`}
                 />
               </div>
-              <div >
-                <label className="text-sm font-medium">
-                  Experience Range(yrs):
-                </label>
-                <input
+              <div className={styles.rowWithLabelExp}>
+              <input
                   type="checkbox"
                   name="minExperience"
                   checked={activeJob.minExperience}
                   onChange={handleCheckboxChange}
-                  className="mr-2"
+                  
+                  className={`mt-1 w-full px-3 py-2 text-2xl bg-white border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 ${styles.mlChkWid}`}
+                  
                 />
-                <select
-                  className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                <label className="text-sm font-medium">
+                  Experience Range(yrs):
+                </label>
+
+                <br />
+                
+                 <select
+                className={styles.minInput}
                   name="minExperience"
                   value={activeJob.minExperience}
                   onChange={handleInputChange}
+                  
                 >
                   <option value="">Min</option>
                   {options}
                 </select>
+                <span > -   </span>
+                <br/>
                 <select
-                  className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                 className={styles.maxInput}
                   name="maxExperience"
                   value={activeJob.maxExperience}
                   onChange={handleInputChange}
@@ -373,6 +382,7 @@ function Editor() {
                   {filteredMaxOptions}
                 </select>
               </div>
+              
               <div className={styles.row}>
                 <label className="flex items-center space-x-2 mt-4">
                   <input
@@ -388,7 +398,7 @@ function Editor() {
                     placeholder="Qualification"
                     value={activeJob.qualification}
                     onChange={handleInputChange}
-                    className="mt-1 w-full px-3 py-2 text-2xl bg-white border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                    className={styles.InputBox}
                   />
                 </label>
               </div>
@@ -426,7 +436,7 @@ function Editor() {
                     placeholder="Call to action concluding statement..."
                     value={activeJob.message}
                     onChange={handleInputChange}
-                    className="mt-1 w-full px-3 py-2 text-2xl bg-white border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                    className={styles.messageBox}
                   />
                 </label>
               </div>
